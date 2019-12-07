@@ -1,2 +1,4 @@
 # DexieMacro
-## Cool kids only
+
+## Getting Started
+First, [Download Python](https://python.org/downloads)
