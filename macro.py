@@ -1,18 +1,20 @@
-from turtle import *
-try:
-	keyboard.press_and_release('shift+s, space')
-	keyboard.write('The quick brown fox jumps over the lazy dog.')
-	keyboard.add_hotkey('ctrl+shift+a', print, args=('triggered', 'hotkey'))
+#imports
+import turtle as t
+import keyboard
 
-	# Press PAGE UP then PAGE DOWN to type "foobar".
-	keyboard.add_hotkey('page up', lambda: keyboard.write('foobar'))
+keyboard.press_and_release('shift+s, space')
+keyboard.write('The quick brown fox jumps over the lazy dog.')
+keyboard.add_hotkey('ctrl+shift+a', print, args=('triggered', 'hotkey'))
 
-	# Blocks until you press esc.
-	keyboard.wait('esc')
+# Press PAGE UP then PAGE DOWN to type "foobar".
+keyboard.add_hotkey('page up', lambda: keyboard.write('foobar'))
 
-	# Record events until 'esc' is pressed.
-	recorded = keyboard.record(until='esc')
-	keyboard.play(recorded, speed_factor=3)
+# Blocks until you press esc.
+keyboard.wait('esc')
 
-	keyboard.add_abbreviation('@@', 'my.long.email@example.com')
-	input()
+# Record events until 'esc' is pressed.
+recorded = keyboard.record(until='esc')
+keyboard.play(recorded, speed_factor=3)
+
+keyboard.add_abbreviation('@@', 'my.long.email@example.com')
+input()
