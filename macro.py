@@ -23,7 +23,7 @@ class App(tk.Tk):
         self.geometry(res)
 
 def write_slogan():
-	print("Tkinter is easy to use!")
+	print("Tkinter is HARD to use!")
 
 root = tk.Tk()
 frame = tk.Frame(root)
