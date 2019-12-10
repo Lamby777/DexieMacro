@@ -1,9 +1,9 @@
 #imports
 from termcolor import colored
-import turtle as t
-import keyboard
+import keyboard, turtle as t, tkinter as tk
 
 print(colored("Welcome to DxMacro, a FOSS macro customizer written in Python.", "red"))
+print("")
 
 #keyboard.press_and_release('shift+s, space')
 #keyboard.write('The quick brown fox jumps over the lazy dog.')
@@ -15,3 +15,23 @@ print(colored("Welcome to DxMacro, a FOSS macro customizer written in Python.", 
 #keyboard.add_abbreviation('@@', 'my.long.email@example.com')
 
 input()
+	
+
+def write_slogan():
+	print("Tkinter is easy to use!")
+
+root = tk.Tk()
+frame = tk.Frame(root)
+frame.pack()
+
+button = tk.Button(frame, 
+	text="QUIT", 
+	fg="red",
+	command=quit)
+button.pack(side=tk.LEFT)
+slogan = tk.Button(frame,
+text="Hello",
+command=write_slogan)
+slogan.pack(side=tk.LEFT)
+
+root.mainloop()
