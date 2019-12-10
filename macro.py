@@ -1,6 +1,6 @@
 #imports
 from termcolor import colored
-import keyboard, turtle as t, tkinter as tk
+import keyboard
 ver = "d7"
 
 print(colored("Welcome to DxMacro, a FOSS macro customizer written in Python.", "red"))
