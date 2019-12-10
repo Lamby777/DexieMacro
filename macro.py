@@ -1,9 +1,10 @@
 #imports
 from termcolor import colored
 import keyboard, turtle as t, tkinter as tk
+ver = "d6"
 
 print(colored("Welcome to DxMacro, a FOSS macro customizer written in Python.", "red"))
-print("Your settings have been loaded, press enter to change them")
+print("DxMacro is running version " + ver)
 
 #keyboard.press_and_release('shift+s, space')
 #keyboard.write('The quick brown fox jumps over the lazy dog.')
@@ -14,9 +15,13 @@ print("Your settings have been loaded, press enter to change them")
 #keyboard.play(recorded, speed_factor=3)
 #keyboard.add_abbreviation('@@', 'my.long.email@example.com')
 
-input()
-	
-keyboard.remove_abbreviation
+class App(tk.Tk): 
+    def __init__(self, title="Untitled", icon="python.ico", res="200x200"): 
+        super().__init__() 
+        self.title(title) 
+        self.iconbitmap(icon) 
+        self.geometry(res) 
+
 def write_slogan():
 	print("Tkinter is easy to use!")
 
@@ -24,9 +29,12 @@ root = tk.Tk()
 frame = tk.Frame(root)
 frame.pack()
 
-text = tk.Text(
-	text="DexieMacro Options Page"
+title = tk.Text(
+	frame
 )
+
+title.pack()
+title.insert(tk.END, "Just a text Widget\nin two lines\n")
 
 button = tk.Button(frame, 
 	text="QUIT", 
