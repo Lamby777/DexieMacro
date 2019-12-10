@@ -3,9 +3,19 @@ from termcolor import colored
 import keyboard
 ver = "d7"
 
-print(colored("Welcome to DxMacro, a FOSS macro customizer written in Python.", "red"))
-print("DxMacro is running version " + ver + "\n")
+cmds = {
+	"exit": "haha"
+}
 
+print(colored("Welcome to DxMacro, a FOSS CLI Macro tool written in Python3.", "red"))
+print("DxMacro is running version " + ver)
+print("Type command \"help\" for help")
+
+while True:
+	print("> ", end="")
+	cmd = input()
+	if cmd in cmds.keys():
+		quit()
 #keyboard.press_and_release('shift+s, space')
 #keyboard.write('The quick brown fox jumps over the lazy dog.')
 #keyboard.add_hotkey('ctrl+shift+a', print, args=('triggered', 'hotkey'))
