@@ -17,10 +17,10 @@ print("DxMacro is running version " + ver)
 
 class App(tk.Tk): 
     def __init__(self, title="Untitled", icon="python.ico", res="200x200"): 
-        super().__init__() 
-        self.title(title) 
-        self.iconbitmap(icon) 
-        self.geometry(res) 
+        super().__init__()
+        self.title(title)
+        self.iconbitmap(icon)
+        self.geometry(res)
 
 def write_slogan():
 	print("Tkinter is easy to use!")
